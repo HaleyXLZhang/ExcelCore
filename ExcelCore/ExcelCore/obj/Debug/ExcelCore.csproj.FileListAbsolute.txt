@@ -1,0 +1,6 @@
+C:\Users\li\Source\Repos\ExcelCore\ExcelCore\bin\Debug\ExcelCore.dll
+C:\Users\li\Source\Repos\ExcelCore\ExcelCore\bin\Debug\ExcelCore.pdb
+C:\Users\li\Source\Repos\ExcelCore\ExcelCore\obj\Debug\ExcelCore.csprojResolveAssemblyReference.cache
+C:\Users\li\Source\Repos\ExcelCore\ExcelCore\obj\Debug\ExcelCore.csproj.CoreCompileInputs.cache
+C:\Users\li\Source\Repos\ExcelCore\ExcelCore\obj\Debug\ExcelCore.dll
+C:\Users\li\Source\Repos\ExcelCore\ExcelCore\obj\Debug\ExcelCore.pdb
