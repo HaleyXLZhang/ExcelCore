@@ -8,3 +8,13 @@ C:\Users\li\Source\Repos\ExcelCore\ExcelCoreTests\bin\Debug\Microsoft.VisualStud
 C:\Users\li\Source\Repos\ExcelCore\ExcelCoreTests\bin\Debug\ExcelCore.pdb
 C:\Users\li\Source\Repos\ExcelCore\ExcelCoreTests\obj\Debug\ExcelCoreTests.dll
 C:\Users\li\Source\Repos\ExcelCore\ExcelCoreTests\obj\Debug\ExcelCoreTests.pdb
+C:\Users\li\Documents\GitHub\ExcelCore\ExcelCore\ExcelCoreTests\bin\Debug\ExcelCoreTests.dll
+C:\Users\li\Documents\GitHub\ExcelCore\ExcelCore\ExcelCoreTests\bin\Debug\ExcelCoreTests.pdb
+C:\Users\li\Documents\GitHub\ExcelCore\ExcelCore\ExcelCoreTests\bin\Debug\ExcelCore.dll
+C:\Users\li\Documents\GitHub\ExcelCore\ExcelCore\ExcelCoreTests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\li\Documents\GitHub\ExcelCore\ExcelCore\ExcelCoreTests\bin\Debug\ExcelCore.pdb
+C:\Users\li\Documents\GitHub\ExcelCore\ExcelCore\ExcelCoreTests\obj\Debug\ExcelCoreTests.csprojResolveAssemblyReference.cache
+C:\Users\li\Documents\GitHub\ExcelCore\ExcelCore\ExcelCoreTests\obj\Debug\ExcelCoreTests.csproj.ResolveComReference.cache
+C:\Users\li\Documents\GitHub\ExcelCore\ExcelCore\ExcelCoreTests\obj\Debug\ExcelCoreTests.csproj.CoreCompileInputs.cache
+C:\Users\li\Documents\GitHub\ExcelCore\ExcelCore\ExcelCoreTests\obj\Debug\ExcelCoreTests.dll
+C:\Users\li\Documents\GitHub\ExcelCore\ExcelCore\ExcelCoreTests\obj\Debug\ExcelCoreTests.pdb
