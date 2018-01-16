@@ -9,3 +9,8 @@ C:\Users\li\Documents\GitHub\ExcelCore\ExcelCore\ExcelCore\bin\Debug\ExcelCore.p
 C:\Users\li\Documents\GitHub\ExcelCore\ExcelCore\ExcelCore\obj\Debug\ExcelCore.csproj.CoreCompileInputs.cache
 C:\Users\li\Documents\GitHub\ExcelCore\ExcelCore\ExcelCore\obj\Debug\ExcelCore.dll
 C:\Users\li\Documents\GitHub\ExcelCore\ExcelCore\ExcelCore\obj\Debug\ExcelCore.pdb
+C:\Users\Administrator\Source\Repos\ExcelCore\ExcelCore\ExcelCore\bin\Debug\ExcelCore.dll
+C:\Users\Administrator\Source\Repos\ExcelCore\ExcelCore\ExcelCore\bin\Debug\ExcelCore.pdb
+C:\Users\Administrator\Source\Repos\ExcelCore\ExcelCore\ExcelCore\obj\Debug\ExcelCore.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Source\Repos\ExcelCore\ExcelCore\ExcelCore\obj\Debug\ExcelCore.dll
+C:\Users\Administrator\Source\Repos\ExcelCore\ExcelCore\ExcelCore\obj\Debug\ExcelCore.pdb

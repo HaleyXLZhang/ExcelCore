@@ -22,6 +22,7 @@ namespace ExcelCore
             app.DisplayAlerts = false;
             //设置是否显示Excel
             app.Visible = false;
+            app.EnableEvents = false;
             //禁止刷新屏幕
             app.ScreenUpdating = false;
 
@@ -52,9 +53,9 @@ namespace ExcelCore
         {
             dynamic rng = app.ActiveSheet.Range(columnName + rowIndex);
 
-            object[,] exceldata = (object[,])rng.get_Value(XlRangeValueDataType.xlRangeValueDefault);
+            object exceldata = rng.Value(XlRangeValueDataType.xlRangeValueDefault);
 
-            Cell cell = new Cell() { Value = exceldata[rowIndex, ExcelConvert.ToIndex(columnName)+1].ToString(), ColumnName = columnName, RowIndex = rowIndex };
+            Cell cell = new Cell() { Value = exceldata == null ? "" : exceldata.ToString(), ColumnName = columnName, RowIndex = rowIndex };
 
             return cell;
         }
@@ -63,12 +64,12 @@ namespace ExcelCore
         {
             List<Cell> cells = new List<Cell>();
             dynamic rng = app.ActiveSheet.Range(start.ColumnName + start.RowIndex + ":" + end.ColumnName + end.RowIndex);
-            object[,] exceldata = (object[,])rng.get_Value(XlRangeValueDataType.xlRangeValueDefault);
+            object[,] exceldata = (object[,])rng.Value(XlRangeValueDataType.xlRangeValueDefault);
             for (int i = 1; i <= exceldata.GetLongLength(0); i++)
             {
                 for (int j = 1; j <= exceldata.GetLongLength(1); j++)
                 {
-                    Cell cell = new Cell() { Value = exceldata[i, j].ToString(), ColumnName = ExcelConvert.ToName(j-1), RowIndex = i };
+                    Cell cell = new Cell() { Value = exceldata[i, j] == null ? "" : exceldata[i, j].ToString(), ColumnName = ExcelConvert.ToName(j - 1), RowIndex = i };
                     cells.Add(cell);
                 }
             }
@@ -78,15 +79,15 @@ namespace ExcelCore
         public Column GetColumn(string columnName)
         {
             Column column = new Column();
-          //  dynamic c1 = app.ActiveSheet.Cells[1, ExcelConvert.ToIndex(columnName)+1];
-           // dynamic c2 = app.ActiveSheet.Cells[UsedRowCount, ExcelConvert.ToIndex(columnName)+1];
-            dynamic rng = app.ActiveSheet.Range(columnName+1+":"+ columnName+ UsedRowCount);
+            //  dynamic c1 = app.ActiveSheet.Cells[1, ExcelConvert.ToIndex(columnName)+1];
+            // dynamic c2 = app.ActiveSheet.Cells[UsedRowCount, ExcelConvert.ToIndex(columnName)+1];
+            dynamic rng = app.ActiveSheet.Range(columnName + 1 + ":" + columnName + UsedRowCount);
             object[,] exceldata = (object[,])rng.Value(XlRangeValueDataType.xlRangeValueDefault);
             for (int i = 1; i <= exceldata.GetLongLength(0); i++)
             {
                 for (int j = 1; j <= exceldata.GetLongLength(1); j++)
                 {
-                    Cell cell = new Cell() { Value = exceldata[i, j].ToString(), ColumnName = ExcelConvert.ToName(j-1), RowIndex = i };
+                    Cell cell = new Cell() { Value = exceldata[i, j] == null ? "" : exceldata[i, j].ToString(), ColumnName = ExcelConvert.ToName(j - 1), RowIndex = i };
                     column.Cells.Add(cell);
                 }
             }
@@ -156,12 +157,12 @@ namespace ExcelCore
 
         public void SetCellValue(int rowIndex, string columnName, string value)
         {
-            app.ActiveSheet.Cells[rowIndex, ExcelConvert.ToIndex(columnName)+1] = value;
+            app.ActiveSheet.Cells[rowIndex, ExcelConvert.ToIndex(columnName) + 1] = value;
         }
         public void SetCellValue(string sheetName, int rowIndex, string columnName, string value)
         {
             dynamic xlsWorkSheet = wkb.Worksheets[sheetName];
-            xlsWorkSheet.Cells[rowIndex, ExcelConvert.ToIndex(columnName)+1] = value;
+            xlsWorkSheet.Cells[rowIndex, ExcelConvert.ToIndex(columnName) + 1] = value;
         }
     }
 }
