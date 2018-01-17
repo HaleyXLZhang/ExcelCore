@@ -15,6 +15,7 @@ namespace ExcelCore.Interface
         IList<string> GetSheetNames();
         IList<Row> GetSheetByRow();
         Column GetColumn(string columnName);
+        IList<Cell> GetRangeByName(string rangeName);
         IList<Cell> GetRange(Cell start, Cell end);
         void SetCellValue(int rowIndex, string columnName, string value);
         void SetCellValue(string sheetName, int rowIndex, string columnName, string value);
