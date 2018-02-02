@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\ExcelCore",
+    "\\ExcelCore\\ExcelCore",
+    "\\ExcelCore\\ExcelCoreTests",
+    "\\ExcelCore\\ExcelCoreTests\\Properties",
+    "\\ExcelCore\\ExcelCore\\Common",
+    "\\ExcelCore\\ExcelCore\\Properties"
+  ],
+  "SelectedNode": "\\ExcelCore\\ExcelCoreTests\\ExcelCoreTests.cs",
+  "PreviewInSolutionExplorer": false
+}

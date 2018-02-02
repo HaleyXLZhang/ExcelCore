@@ -44,6 +44,7 @@
     <Compile Include="Common\Column.cs" />
     <Compile Include="Common\ExcelConvert.cs" />
     <Compile Include="Common\Row.cs" />
+    <Compile Include="Common\Win32API.cs" />
     <Compile Include="Common\XlRangeValueDataType.cs" />
     <Compile Include="Common\XlSaveAsAccessMode.cs" />
     <Compile Include="ExcelCore.cs" />

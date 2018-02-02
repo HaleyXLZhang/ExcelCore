@@ -32,6 +32,11 @@ namespace ExcelCore
         {
             wkb.Close(Type.Missing, Type.Missing, Type.Missing);
             app.Quit();
+            IntPtr t = new IntPtr(app.Hwnd);
+            int k = 0;
+            Win32API.GetWindowThreadProcessId(t, out k);
+            System.Diagnostics.Process p = System.Diagnostics.Process.GetProcessById(k);
+            p.Kill();
             wkb = null;
             app = null;
             GC.Collect();
@@ -92,7 +97,7 @@ namespace ExcelCore
             List<Cell> cells = new List<Cell>();
             dynamic rng = app.ActiveSheet.Range(start.ColumnName + start.RowIndex + ":" + end.ColumnName + end.RowIndex);
 
-          
+
             if (rng == null)
             {
                 return cells;
@@ -120,7 +125,7 @@ namespace ExcelCore
             Column column = new Column();
 
             dynamic rng = app.ActiveSheet.Range(columnName + 1 + ":" + columnName + UsedRowCount);
-        
+
             if (rng == null)
             {
                 return column;
