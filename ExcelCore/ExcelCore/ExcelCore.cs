@@ -150,7 +150,20 @@ namespace ExcelCore
 
         public IList<Row> GetSheetByRow()
         {
-            throw new NotImplementedException();
+            List<Row> rows = new List<Row>();
+            object[,] value = (object[,])app.ActiveSheet.Range["A2", ExcelConvert.ToName(app.ActiveSheet.UsedRange.Columns.Count) + app.ActiveSheet.UsedRange.Rows.Count].Value;
+            for (int row = 1; row <= value.GetLongLength(0); row++)
+            {
+                Row rowInfo = new Row() { Index = row };
+                for (int col = 1; col <= value.GetLongLength(1); col++)
+                {
+
+                    Cell cell = new Cell() { Value = value[row, col] == null ? "" : value[row, col].ToString(), ColumnName = ExcelConvert.ToName(col - 1), RowIndex = row };
+                    rowInfo.Cells.Add(cell);
+                }
+                rows.Add(rowInfo);
+            }
+            return rows;
         }
 
         public IList<string> GetSheetNames()

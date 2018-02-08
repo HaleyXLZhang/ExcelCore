@@ -39,51 +39,10 @@ namespace ExcelCore.Tests
         {
             using (ExcelCore excelCore = new ExcelCore())
             {
-                excelCore.OpenExcel(@"C:\Users\Administrator\Desktop\TestExcel\Letter Automation V1.19.1.xlsm", false);
-                excelCore.SelectSheet("Tool");
+                excelCore.OpenExcel(@"C:\Users\Administrator\Desktop\WorkFiles\Letter Automation\Control turnaround.xlsx", false);
+                excelCore.SelectSheet("Sheet1");
 
-                excelCore.SetCellValue(2, "B", "");
-                excelCore.SetCellValue(3, "B", "");
-                excelCore.SetCellValue(4, "B", "");
-                excelCore.SetCellValue(5, "B", "");
-                excelCore.SetCellValue(6, "B", "");
-                excelCore.SetCellValue(7, "B", "");
-                excelCore.SetCellValue(8, "B", "");
-                excelCore.SetCellValue(9, "B", "");
-                excelCore.SetCellValue(10, "B", "");
-                excelCore.SetCellValue(11, "B", "");
-                excelCore.SetCellValue(12, "B", "");
-
-                excelCore.Save();
-
-                excelCore.SetCellValue(2, "B", "345");
-                excelCore.SetCellValue(3, "B", "345");
-                excelCore.SetCellValue(4, "B", "3425");
-                excelCore.SetCellValue(5, "B", "345");
-                excelCore.SetCellValue(6, "B", "PAH");
-                excelCore.SetCellValue(7, "B", "EE");
-                excelCore.SetCellValue(8, "B", "PW");
-                excelCore.SetCellValue(9, "B", "ER");
-                excelCore.SetCellValue(10, "B", "");
-                excelCore.SetCellValue(11, "B", "1st letter");
-                excelCore.SetCellValue(12, "B", "Y");
-
-                excelCore.Save();
-
-                excelCore.SelectSheet("Data");
-
-
-                excelCore.SetCellValue(2, "P", "C");
-
-
-                Cell input_result = excelCore.GetCell(2, "S");
-                Cell Match_document_Name_result = excelCore.GetCell(5,"S");
-                Cell Match_Reason_document_result = excelCore.GetCell(14, "S");
-
-
-
-
-
+                IList<Row> rows = excelCore.GetSheetByRow();
 
             }
 
@@ -102,7 +61,7 @@ namespace ExcelCore.Tests
             app.DisplayAlerts = false;
             app.ScreenUpdating = false;
             app.EnableEvents = false;
-            Microsoft.Office.Interop.Excel.Workbook wbk = app.Workbooks.Open(@"C:\Users\Administrator\Desktop\TestExcel\Letter Automation V1.19.1.xlsm",
+            Microsoft.Office.Interop.Excel.Workbook wbk = app.Workbooks.Open(@"C:\Users\Administrator\Desktop\WorkFiles\Letter Automation\Control turnaround.xlsx",
                   Type.Missing,
                   false,
                   Type.Missing,
@@ -117,16 +76,20 @@ namespace ExcelCore.Tests
                   Type.Missing,
                   Type.Missing,
                   Type.Missing);
-            Worksheet sheet = (Worksheet)wbk.Worksheets["Data"];
-            
-            object DeptComboBox=sheet.Range["DeptComboBox"].Value;
-            object Language = sheet.Range["Language"].Value;
-            object value = sheet.Range["K40", "K46"].Value;
-            object language = sheet.Range["P2"].Value;
-            object reasonDocName = sheet.Range["S14"].Value;
-            sheet.Range["P2"].Value = "C";
-            reasonDocName = sheet.Range["S14"].Value;
-            object furmula = sheet.Range["S14"].Formula;
+            Worksheet sheet = (Worksheet)wbk.Worksheets["Sheet1"];
+
+
+         
+
+
+            //object DeptComboBox=sheet.Range["DeptComboBox"].Value;
+            //object Language = sheet.Range["Language"].Value;
+            //object value = sheet.Range["K40", "K46"].Value;
+            //object language = sheet.Range["P2"].Value;
+            //object reasonDocName = sheet.Range["S14"].Value;
+            //sheet.Range["P2"].Value = "C";
+            //reasonDocName = sheet.Range["S14"].Value;
+            //object furmula = sheet.Range["S14"].Formula;
         }
     }
 }
