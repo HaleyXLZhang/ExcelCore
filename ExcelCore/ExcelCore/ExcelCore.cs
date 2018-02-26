@@ -151,7 +151,7 @@ namespace ExcelCore
         public IList<Row> GetSheetByRow()
         {
             List<Row> rows = new List<Row>();
-            object[,] value = (object[,])app.ActiveSheet.Range["A2", ExcelConvert.ToName(app.ActiveSheet.UsedRange.Columns.Count) + app.ActiveSheet.UsedRange.Rows.Count].Value;
+            object[,] value = (object[,])app.ActiveSheet.Range["A1", ExcelConvert.ToName(app.ActiveSheet.UsedRange.Columns.Count) + app.ActiveSheet.UsedRange.Rows.Count].Value;
             for (int row = 1; row <= value.GetLongLength(0); row++)
             {
                 Row rowInfo = new Row() { Index = row };
